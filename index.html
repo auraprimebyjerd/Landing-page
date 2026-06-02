@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Results & Proof Landing Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ================= BASE CSS ================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+/* ===== TOP BANNER ===== */
+
+.top-banner{
+background:linear-gradient(90deg,#d4af37,#f5d76e);
+color:black;
+font-weight:700;
+text-align:center;
+padding:14px;
+font-size:14px;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:80px 8%;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h1{
+font-size:55px;
+font-weight:800;
+line-height:1.15;
+}
+
+.hero-text span{color:#d4af37;}
+
+.hero-text p{
+margin-top:25px;
+font-size:18px;
+color:#d7d7d7;
+line-height:1.8;
+}
+
+/* CTA */
+
+.cta-btn{
+display:inline-block;
+margin-top:35px;
+padding:18px 34px;
+border-radius:50px;
+background:linear-gradient(90deg,#d4af37,#f5d76e);
+color:black;
+font-weight:700;
+text-decoration:none;
+transition:.3s;
+}
+
+.cta-btn:hover{
+transform:translateY(-4px);
+}
+
+/* ===== COUNTDOWN ===== */
+
+.timer-box{
+margin-top:35px;
+padding:24px;
+background:#101010;
+border:1px solid #d4af37;
+border-radius:22px;
+display:inline-block;
+}
+
+#countdown{
+font-size:42px;
+font-weight:800;
+color:#f5d76e;
+margin-top:10px;
+}
+
+/* ===== PROOF ===== */
+
+.results-proof-section{
+padding:90px 8%;
+background:#050505;
+}
+
+.section-header h2{
+text-align:center;
+font-size:40px;
+color:#d4af37;
+}
+
+.section-header p{
+text-align:center;
+color:#cfcfcf;
+margin-top:15px;
+}
+
+.proof-category h3{
+margin-top:60px;
+color:#f5d76e;
+}
+
+.proof-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+margin-top:20px;
+}
+
+.proof-card img{
+width:100%;
+border-radius:15px;
+border:1px solid #d4af37;
+}
+
+/* ===== FAQ ===== */
+
+.faq{
+padding:80px 8%;
+}
+
+.faq h2{
+text-align:center;
+color:#d4af37;
+margin-bottom:40px;
+}
+
+.faq-item{
+background:#111;
+margin-bottom:15px;
+border-radius:12px;
+overflow:hidden;
+}
+
+.faq-question{
+width:100%;
+padding:20px;
+background:none;
+border:none;
+color:white;
+font-weight:700;
+cursor:pointer;
+}
+
+.faq-answer{
+display:none;
+padding:20px;
+color:#ccc;
+}
+
+/* ===== WHATSAPP ===== */
+
+.whatsapp-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:16px 22px;
+border-radius:50px;
+text-decoration:none;
+font-weight:700;
+z-index:999;
+}
+
+/* ===== POPUP ===== */
+
+.popup{
+position:fixed;
+left:20px;
+bottom:20px;
+background:#111;
+padding:15px;
+border:1px solid #d4af37;
+border-radius:12px;
+display:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="top-banner">
+🔥 Limited Offer — Real Results & Proof Below
+</div>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-text">
+<h1>Build <span>Real Income</span> With Verified Proof</h1>
+<p>See real payments, withdrawals, dashboards and testimonials from users.</p>
+
+<a href="#proof" class="cta-btn">View Proof Now</a>
+
+<div class="timer-box">
+Time Left:
+<div id="countdown">10:00</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROOF -->
+<section id="proof" class="results-proof-section">
+
+<div class="section-header">
+<h2>Results & Proof</h2>
+<p>Real verified earnings, dashboards and testimonials</p>
+</div>
+
+<!-- PAYMENT -->
+<div class="proof-category">
+<h3>Payment & Withdrawal Proofs</h3>
+<div class="proof-grid">
+<!-- 10 placeholders -->
+<script>
+for(let i=1;i<=10;i++){
+document.write(`<div class="proof-card"><img src="images/payment${i}.jpg"></div>`);
+}
+</script>
+</div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="proof-category">
+<h3>Dashboard & Testimonials</h3>
+<div class="proof-grid">
+<script>
+for(let i=1;i<=28;i++){
+document.write(`<div class="proof-card"><img src="images/proof${i}.jpg"></div>`);
+}
+</script>
+</div>
+</div>
+
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+
+<h2>Frequently Asked Questions</h2>
+
+<div class="faq-item">
+<button class="faq-question">Is this real?</button>
+<div class="faq-answer">Yes, all results are verified and shown above.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">How do I join?</button>
+<div class="faq-answer">Click the WhatsApp button and contact us.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-question">How fast do I earn?</button>
+<div class="faq-answer">Results vary based on activity.</div>
+</div>
+
+</section>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/233531816129" class="whatsapp-btn">
+WhatsApp Us
+</a>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+🔥 Someone just joined!
+</div>
+
+<script>
+
+/* ===== COUNTDOWN TIMER ===== */
+
+let time = 600;
+let timer = setInterval(()=>{
+let m = Math.floor(time/60);
+let s = time%60;
+document.getElementById("countdown").innerHTML =
+`${m}:${s<10?"0"+s:s}`;
+time--;
+if(time < 0) time = 600;
+},1000);
+
+/* ===== FAQ TOGGLE ===== */
+
+document.querySelectorAll(".faq-question").forEach(btn=>{
+btn.addEventListener("click",()=>{
+let answer = btn.nextElementSibling;
+answer.style.display = answer.style.display==="block"?"none":"block";
+});
+});
+
+/* ===== POPUP ===== */
+
+setInterval(()=>{
+let popup = document.getElementById("popup");
+popup.style.display="block";
+setTimeout(()=>popup.style.display="none",3000);
+},10000);
+
+</script>
+
+</body>
+  </html>
